@@ -22,21 +22,18 @@ prime[j]=0;
  {
         Scanner in=new Scanner(System.in);
        seive();
-         int tc=sc.nextInt();
-         int n=sc.nextInt();
-         for(int i=0;i<tc;i++)
-         {
-             for(int j=0;j<n;j++)
+         int k=sc.nextInt();
+             for(int j=0;j<k;j++)
              {
-                 if(prime[i]==1 && prime[n-i]==1)
+                 if(prime[i]==1 && prime[k-i]==1)
                  {
-                     if(n==(i+(n-i)))
-                     System.out.println("Arjit");
-                     else
-                     System.out.println("Deepa");
+                     flag=true;
                  }
              }
-         }
+             if(flag) 
+                     System.out.println("Deepa");
+                     else
+                     System.out.println("Arjit");
    }
 }
 ==========
