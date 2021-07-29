@@ -1,4 +1,4 @@
-import java.util.*;//package
+import java.util.*;
 class TestClass
  { static int count=0;
 static int prime[]=new int[1000005];
