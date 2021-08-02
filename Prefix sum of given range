@@ -1,0 +1,21 @@
+class NumArray {
+    int[] nums;
+int[] prefix;
+    public NumArray(int[] nums) 
+    {
+        int n=nums.length;
+       prefix=new int[n+1]; prefix[0]=0; 
+        for(int left=1;left<=n;left++) 
+        { 
+            prefix[left]=prefix[left-1]+nums[left-1];
+    }
+        }
+    
+    public int sumRange(int left, int right) 
+    {
+        
+            return prefix[right+1]-prefix[left];
+        
+    }
+        
+}
