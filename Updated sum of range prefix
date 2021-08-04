@@ -1,0 +1,57 @@
+import java.util.*;
+public class Main
+ {	
+ public static void main(String args[]) 
+ {		
+ int n;		
+ Scanner sc = new Scanner(System.in);		
+ n = sc.nextInt();		
+ int arr[] = new int[n];		
+ for (int i = 0; i <n; i++)
+  {			
+  arr[i] = sc.nextInt();		
+  }		
+  int prefix[] = new int[n];		
+  prefix[0] = arr[0];		
+  for (int i = 1; i <n; i++)
+   {			
+   prefix[i] = prefix[i - 1] + arr[i];		
+   }		
+   int l, r;	
+   System.out.println("index before update");	
+   l = sc.nextInt();		
+   r = sc.nextInt();		
+   if (l == 0)
+    System.out.println(prefix[r]);		
+    else 
+    System.out.println(prefix[r] - prefix[l - 1]);
+    System.out.println("value to be added");
+    int x=sc.nextInt();
+    System.out.println("value added from the index");
+    int A=sc.nextInt();
+    System.out.println("value added to the index");
+    int B=sc.nextInt();
+    for (int i = 1; i <n; i++)
+   {			
+   prefix[i] = prefix[i - 1] + arr[i]+x;		
+   }	
+   if (A== 0)
+    System.out.println(prefix[B]);		
+    else 
+    System.out.println(prefix[B] - prefix[A- 1]);
+    		}}
+=====================
+7
+11 32 5 7 19 11 8
+index before update
+2
+6
+50
+value to be added
+16
+value added from the index
+1
+value added to the index
+5
+154
+
