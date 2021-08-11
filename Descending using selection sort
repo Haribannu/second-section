@@ -1,22 +1,54 @@
-public class SelectionSort{
-public static void main(String args[]){
-int arr[] = {45,8,14,1,52,16,2,10};
-int size = arr.length;
-for (int i = 0 ;i< size-1; i++){
-int min = i;
-for (int j = i+1; j< size; j++){
-if (arr[j] > arr[min]){
-min = j;
+import java.util.*;
+class SelectionSortDes
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter array size");
+int n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("enter elements");
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+System.out.println("before sorting");
+show(a);
+selection(a,n);
+System.out.println();
+System.out.println("after sorting");
+show(a);
+}
+public static void selectionsort(int a[],int n)
+{
+for(int i=0;i<n;i++)
+{
+int max=i;
+for(int j=i+1;j<n;j++)
+{
+if(a[j]>a[max])
+max=j;
+}
+if(max!=i)
+{
+int t=a[i];
+a[i]=a[max];
+a[max]=t;
 }
 }
-int temp = arr[min];
-arr[min] = arr[i];
-arr[i] = temp;
 }
-for (int i = 0 ;i< size; i++){
-System.out.print(" "+arr[i]);
+public static void show(int a[])
+{
+for(int i:a)
+System.out.print(i+" ");
 }
-}  
 }
-=====================
+
+===============================================================================
+OUTPUT:--
+enter array size
+8
+enter elements
+45 8 14 1 52 16 2 10
+before sorting
+45 8 14 1 52 16 2 10
+after sorting
 52 45 16 14 10 8 2 1
