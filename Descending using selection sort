@@ -43,12 +43,14 @@ System.out.print(i+" ");
 }
 
 ===============================================================================
-OUTPUT:--
+OUTPUT:-
+
 enter array size
 8
 enter elements
-45 8 14 1 52 16 2 10
+4 18 1 16 2 16 21 13
 before sorting
-45 8 14 1 52 16 2 10
+4 18 1 16 2 16 21 13
 after sorting
-52 45 16 14 10 8 2 1
+21 18 16 16 13 4 2 1
+[Program finished]
