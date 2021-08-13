@@ -20,6 +20,10 @@ public class CheckPrimeNumber {
 		    	 System.out.print("It is a Prime Number.");
 		    else
 		    	 System.out.print("It is not a Prime Number.");
-	        cs.close();
+	        
 		}
 	}
+============================
+Enter your Number:5
+It is a Prime Number.
+
