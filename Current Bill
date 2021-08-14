@@ -1,7 +1,7 @@
 import java.util.*;
  
 
-class ComputeElectricityBill{
+class ElectricBill{
 
     public static double calculateBill(double units)
 
